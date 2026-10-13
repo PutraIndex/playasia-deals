@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://putraindex.github.io/playasia-deals/sitemap.xml
