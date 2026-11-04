@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-11-04T14:12:00Z",
+  "source": "Playasia Clearance Sale 2026 (Playstation 4/5)",
+  "source_url": "https://www.play-asia.com/en/clearance/clearance_sale_2026_playstation_4/5/14/713db",
+  "site": "https://putraindex.github.io/playasia-deals/",
+  "channel": "https://t.me/PlayAsiaDeals",
+  "currency": "SGD",
+  "note": "Snapshot published by the scraping agent (Browserbase passes Playasia's Cloudflare). Consumers can post this without scraping.",
+  "deals": [
+    {
+      "name": "Rocket Arena [Mythic Edition]",
+      "price": "S$13.40",
+      "discount": "75%"
+    },
+    {
+      "name": "Cobra Kai 2: Dojos Rising",
+      "price": "S$20.00",
+      "discount": "76%"
+    },
+    {
+      "name": "NBA 2K21",
+      "price": "S$20.00",
+      "discount": "75%"
+    },
+    {
+      "name": "Marvel's Avengers",
+      "price": "S$24.00",
+      "discount": "60%"
+    },
+    {
+      "name": "Iron Harvest [Complete Edition]",
+      "price": "S$82.70",
+      "discount": "59%"
+    },
+    {
+      "name": "Prince of Persia: The Lost Crown",
+      "price": "S$28.10",
+      "discount": "40%"
+    }
+  ]
+}
