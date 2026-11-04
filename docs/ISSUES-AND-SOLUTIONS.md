@@ -70,13 +70,11 @@ Every problem encountered during the build, and exactly how it was fixed.
 2. Replace `&amp;amp;` → `&amp;` (also check `&amp;#`, `&amp;quot;`, `&amp;lt;`, `&amp;gt;`)
 3. Push, wait for Pages rebuild (~40–60s), re-verify with a cache-busting query (`?v=$RANDOM`) — the CDN serves stale content for up to 10 minutes (`cache-control: max-age=600`).
 
-## Issue 8 — curl on Playasia returns 403 (Cloudflare)
+## Issue 8 — curl on Playasia returns 403
 
-**Symptom:** `curl https://www.play-asia.com/deals` -> 403 with 5KB Cloudflare block page.
+**Symptom:** `curl https://www.play-asia.com/deals` → 403 with 5KB Cloudflare block page.
 
-**Fix:** Use real browser automation (Browserbase). Also note this when link-checking: the site's outbound referral links return 403 to bots but work fine for humans - don't "fix" working affiliate links based on bot checks.
-
-**Update (2026-11-04):** a real browser is necessary but not sufficient. A second agent's self-hosted Chrome could not pass the check at all, even when driven over CDP - the page contains no checkbox and no iframe content, so Cloudflare was returning a non-interactive verdict against that browser/IP. The durable answer is to scrape once with a passing browser and publish a static feed for everything else. Full write-up, tests and evidence: **docs/CLOUDFLARE.md**. Live feed: `feed/latest.json`.
+**Fix:** Use real browser automation (Browserbase). Also note this when link-checking: the site's outbound referral links return 403 to bots but work fine for humans — don't "fix" working affiliate links based on bot checks.
 
 ## Issue 9 — Playasia /deals does not exist
 
