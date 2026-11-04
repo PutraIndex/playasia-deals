@@ -1,0 +1,26 @@
+{
+  "name": "Playasia Deal Watcher",
+  "description": "Weekly Playasia clearance check that renders a branded deal-card image and posts it with a caption to the PlayAsia Deals Telegram channel",
+  "trigger": {
+    "config": {
+      "trigger_type": "scheduled",
+      "cron_expression": "0 10 * * 1",
+      "timezone": "Asia/Singapore"
+    }
+  },
+  "definition": {
+    "document": { "dsl": "1.0.0", "name": "playasia_deal_watcher", "version": "1.0", "namespace": "base44" },
+    "do": [
+      {
+        "check_deals": {
+          "call": "invoke_superagent_step",
+          "then": "end",
+          "with": {
+            "message": "Weekly Playasia deal check for Joe (site: https://putraindex.github.io/playasia-deals/, channel: https://t.me/PlayAsiaDeals).\n\n1. Browse https://www.play-asia.com/en/clearance/00/71365 with browser tools (curl is 403-blocked). Open a category (e.g. 'Clearance Sale 2026 Playstation 4/5' or 'Nintendo switch'), wait ~5s for the JS product list, read names + prices + 'You save: N%'.\n2. Pick 4-6 standout deals: 50%+ off on recognizable titles or big discounts on rare/collectible items. Skip anything under ~40% unless notable.\n3. Render a deal card image with Python + PIL (zero credits, fonts at /usr/share/fonts/truetype/dejavu/): 1080x1080 PNG, dark background #0F1420, card rows #171E2E, accent #FF5722, header 'PLAYASIA / CLEARANCE 2026', one row per deal with name, price and % OFF, footer with the site URL and t.me/PlayAsiaDeals. Save to deal-card.png.\n4. Post it with Python multipart upload (NOT curl -F: curl file uploads fail in the sandbox with error 26). Build a multipart body with fields chat_id='@PlayAsiaDeals', caption (the deal list as plain text ending with 'Full deals: https://putraindex.github.io/playasia-deals/'), and the photo file, then POST to https://api.telegram.org/bot<token>/sendPhoto. Use NO parse_mode anywhere.\n5. If the photo post fails, fall back to a plain-text sendMessage to @PlayAsiaDeals; if that also fails, DM Joe the ready-to-forward text.\n6. On success, DM Joe one short confirmation line. If no standout deals, post nothing and message no one.\n\nBe frugal: browser + bash/python only, no web searches, no other tools."
+          },
+          "x-base44": { "description": "Renders a deal card image and posts it to @PlayAsiaDeals", "title": "Check deals, render card, post" }
+        }
+      }
+    ]
+  }
+}
