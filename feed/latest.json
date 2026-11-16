@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T14:12:00Z",
+  "generated_at": "2026-11-16T01:02:00Z",
   "source": "Playasia Clearance Sale 2026 (Playstation 4/5)",
   "source_url": "https://www.play-asia.com/en/clearance/clearance_sale_2026_playstation_4/5/14/713db",
   "site": "https://putraindex.github.io/playasia-deals/",
@@ -8,34 +8,44 @@
   "note": "Snapshot published by the scraping agent (Browserbase passes Playasia's Cloudflare). Consumers can post this without scraping.",
   "deals": [
     {
-      "name": "Rocket Arena [Mythic Edition]",
-      "price": "S$13.40",
-      "discount": "75%"
+      "name": "Watch Dogs Legion [Ultimate Edition]",
+      "price": "S$26.90",
+      "discount": "85%"
     },
     {
-      "name": "Cobra Kai 2: Dojos Rising",
-      "price": "S$20.00",
+      "name": "Alfred Hitchcock: Vertigo [Limited Edition]",
+      "price": "S$16.10",
+      "discount": "78%"
+    },
+    {
+      "name": "Tiny Tina's Wonderlands [Chaotic Great Edition]",
+      "price": "S$34.90",
+      "discount": "77%"
+    },
+    {
+      "name": "Monark",
+      "price": "S$22.80",
+      "discount": "77%"
+    },
+    {
+      "name": "NBA 2K21 [Mamba Forever Edition]",
+      "price": "S$30.90",
       "discount": "76%"
     },
     {
-      "name": "NBA 2K21",
-      "price": "S$20.00",
-      "discount": "75%"
+      "name": "Marvel's Avengers",
+      "price": "S$24.20",
+      "discount": "76%"
     },
     {
-      "name": "Marvel's Avengers",
-      "price": "S$24.00",
+      "name": "Dragon Age: The Veilguard",
+      "price": "S$38.90",
       "discount": "60%"
     },
     {
-      "name": "Iron Harvest [Complete Edition]",
-      "price": "S$82.70",
-      "discount": "59%"
-    },
-    {
-      "name": "Prince of Persia: The Lost Crown",
-      "price": "S$28.10",
-      "discount": "40%"
+      "name": "Monster Hunter Wilds [E-Capcom Set] (Multi-Language)",
+      "price": "S$96.60",
+      "discount": "55%"
     }
   ]
 }
